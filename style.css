@@ -1,0 +1,28 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    width: auto;
+    display: flex;
+}
+
+#cover {
+    flex: 1.15;
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+}
+
+#content {
+    flex: 1.85;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    background-color: #f9fafb;
+}
+
+#middle{
+    background-color: white;
+}
