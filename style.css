@@ -1,8 +1,14 @@
+@font-face {
+    font-family: norseBold;
+    src: url(Norse-Bold.otf)
+}
+
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100vh;
     width: auto;
     display: flex;
+    margin: 0;
 }
 
 #cover {
@@ -14,6 +20,34 @@ body {
     color: whitesmoke;
 }
 
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: norseBold;
+    font-size: 6rem;
+    margin-top: 350px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+#logo img {
+    height: 130px;
+}
+
+#img-credit {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 12px;
+    width: calc(100vw/3 + 50px);
+    text-align: center;
+    font-size: 12px;
+}
+
+#img-credit a {
+    color: white;
+}
+
 #content {
     flex: 1.85;
     display: flex;
@@ -23,29 +57,81 @@ body {
     background-color: #f9fafb;
 }
 
+#top {
+    padding: 30px;
+}
+
 #middle {
     background-color: white;
-    padding: 10px;
+    padding: 0px 200px 30px 30px;
+    box-shadow: 3px 2px 5px #aaa;
+}
+
+#bottom {
+    padding: 40px 30px;
+}
+
+#bottom button {
+    padding: 15px 60px;
+    background-color: #596D48;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #aaa;
+}
+
+#bottom a {
+    color: #596D48;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#bottom div {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 70px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
     display: block;
+    padding: 6px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
 }
 
 label {
     display: block;
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    font-size: .9rem;
+    font-weight: bold;
+    color: #2f3845;
+    margin-bottom: 5px;
 }
-
 
 input:invalid {
     border-color: #900;
-    background-color: #fdd;
+    /* background-color: #fdd; */
 }
   
-input:focus:invalid {
-    outline: none;
+input:focus {
+    outline: 1px solid #5e80e2;
+    box-shadow: 2px 2px 5px #aaa;
 }
+/* input:focus:invalid {
+    outline: none;
+} */
 
 /* This is the style of our error messages */
 .error {
@@ -54,12 +140,12 @@ input:focus:invalid {
   
     font-size: 80%;
     color: white;
-    background-color: #900;
-    border-radius: 0 0 5px 5px;
+    color: #900;
+    /* border-radius: 0 0 5px 5px; */
   
     box-sizing: border-box;
 }
   
-.error.active {
+/* .error.active {
     padding: 0.3em;
-}
+} */
